@@ -5,6 +5,7 @@ export SKIP_RAT_TEST="-Drat.skip"
 export AMBARI_PATH_NAME="build-ambari-rpms"
 
 
+export MAVEN_OPTS=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 pushd ambari &&
 mvn versions:set -DnewVersion=${AMBARI_BUILD_VERSION} &&
 pushd ambari-metrics &&
@@ -17,7 +18,6 @@ popd &&
 # build-rpm is to let ambari-metrics-assembly generate rpms.  See ambari-metrics/ambari-metrics-assembly/pom.xml
 # rpm:rpm is to let ambari-server etc. generate rpms. See ambari-server/pom.xml
 # python.ver does nothing to do with python version at build time but sets a rpm dependency. See ./ambari-server/pom.xml
-export MAVEN_OPTS=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 mvn -B -e clean install package rpm:rpm -Dbuild-rpm ${SKIP_TEST} ${SKIP_RAT_TEST} -Dpython.ver='python >= 2.6' -Dstack.distribution=HDP &&
 popd &&
 
