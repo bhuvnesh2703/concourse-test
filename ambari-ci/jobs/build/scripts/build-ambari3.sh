@@ -12,7 +12,7 @@ mvn versions:set -DnewVersion=${AMBARI_BUILD_VERSION} &&
 popd &&
 
 # Use below url to download phantomjs, sometimes the original link https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2 does not work
-export PHANTOMJS_CDNURL=https://bitbucket.org/ariya/phantomjs/downloads &&
+#export PHANTOMJS_CDNURL=https://bitbucket.org/ariya/phantomjs/downloads &&
 
 # build-rpm is to let ambari-metrics-assembly generate rpms.  See ambari-metrics/ambari-metrics-assembly/pom.xml
 # rpm:rpm is to let ambari-server etc. generate rpms. See ambari-server/pom.xml
