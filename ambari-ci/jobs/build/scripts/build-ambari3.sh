@@ -29,9 +29,9 @@ cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-assem
 cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-collector/RPMS/x86_64/ambari-metrics-collector-*.rpm ${AMBARI_PATH_NAME}/ &&
 cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-grafana/RPMS/x86_64/ambari-metrics-grafana-*.rpm ${AMBARI_PATH_NAME}/ &&
 cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-hadoop-sink/RPMS/x86_64/ambari-metrics-hadoop-sink-*.rpm ${AMBARI_PATH_NAME}/ &&
-cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-monitor/RPMS/x86_64/ambari-metrics-monitor-*.rpm ${AMBARI_PATH_NAME}/ "
+cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-monitor/RPMS/x86_64/ambari-metrics-monitor-*.rpm ${AMBARI_PATH_NAME}/ 
 
 cp phd-ci/setup_repo.sh build-ambari-rpms/ &&
 chown -R root:root build-ambari-rpms &&
 createrepo build-ambari-rpms/ &&
-tar cvzf AMBARI-OUTPUT.tar.gz build-ambari-rpms &&
+tar cvzf AMBARI-OUTPUT.tar.gz build-ambari-rpms
