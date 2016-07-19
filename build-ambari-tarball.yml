@@ -2,31 +2,57 @@ resources:
 - name: phd-ci
   type: git
   source:
-    uri: https://github.com/bhuvnesh2703/concourse-test
-    branch: master
-    username: bhuvnesh2703
-    password: Citu@_2703
+    uri: {{phd-ci-uri}}
+    branch: {{phd-ci-branch}}
+    username: {{phd-ci-repo-username}}
+    password: {{phd-ci-repo-password}}
 
+- name: ambari
+  type: git
+  source:
+    uri: {{ambari-uri}}
+    branch: {{phd-ci-branch}}
+    username: {{phd-ci-repo-username}}
+    password: {{phd-ci-repo-password}}
+
+- name: phd-misc-peacock
+  type: git
+  source:
+    uri: {{phd-misc-peacock-uri}}
+    branch: {{phd-ci-branch}}
+    username: {{phd-ci-repo-username}}
+    password: {{phd-ci-repo-password}}
+
+- name: docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-useremail}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-repo}}
 
 jobs:
-- name: build-ambari-tarball
+- name: build-ambari
   plan:
-  - get: phd-ci
-    trigger: true
   - aggregate:
-    - task: build-ambari
+    - get: phd-ci
+      trigger: true
+    - get: ambari
+      trigger: true
+  - aggregate:
+    - task: build-ambari-rpms
       priviliged: true
       config:
         platform: linux
         image_resource:
           type: docker-image
           source:
-            repository: bchaudhary/ambari-dev-images
-            username: bchaudhary
-            password: citu@_2703
+            username: {{docker-hub-username}}
+            password: {{docker-hub-password}}
+            repository: {{docker-hub-repo}}
         inputs:
           - name: phd-ci
+          - name: ambari
+          - name: phd-misc-peacock
         run:
-          path: phd-ci/ambari-ci/jobs/build/scripts/ambari-build3.sh
-
-
+          path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh

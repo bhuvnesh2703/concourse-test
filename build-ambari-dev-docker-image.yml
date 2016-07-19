@@ -1,0 +1,27 @@
+resources:
+- name: phd-ci
+  type: git
+  source:
+    uri: {{phd-ci-uri}}
+    branch: {{phd-ci-branch}}
+    username: {{phd-ci-repo-username}}
+    password: {{phd-ci-repo-password}}
+
+- name: docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-useremail}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-repo}}
+
+jobs:
+- name:  build-ambari-docker-image
+  public: true
+  serial: true
+  plan:
+  - get: phd-ci
+    trigger: true
+  - put: docker-image
+    params:
+      build: phd-ci/ambari-ci/jobs/build/docker
