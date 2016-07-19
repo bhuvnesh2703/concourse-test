@@ -1,0 +1,32 @@
+resources:
+- name: phd-ci
+  type: git
+  source:
+    uri: https://github.com/bhuvnesh2703/concourse-test
+    branch: master
+    username: bhuvnesh2703
+    password: Citu@_2703
+
+
+jobs:
+- name: build-ambari-tarball
+  plan:
+  - get: phd-ci
+    trigger: true
+  - aggregate:
+    - task: build-ambari
+      priviliged: true
+      config:
+        platform: linux
+        image_resource:
+          type: docker-image
+          source:
+            repository: bchaudhary/ambari-dev-images
+            username: bchaudhary
+            password: citu@_2703
+        inputs:
+          - name: phd-ci
+        run:
+          path: phd-ci/ambari-ci/jobs/build/scripts/ambari-build3.sh
+
+
