@@ -1,8 +1,8 @@
 #!/bin/bash
 export AMBARI_BUILD_VERSION="2.4.0.0-1"
-export SKIP_TEST='-DskipTests'
-export SKIP_RAT_TEST: '-Drat.skip'
-export OUTPUT_RPM_DIR: 'build-ambari-rpms'
+export SKIP_TEST="-DskipTests"
+export SKIP_RAT_TEST="-Drat.skip"
+export OUTPUT_RPM_DIR="build-ambari-rpms"
 
 
 pushd ambari &&
@@ -31,7 +31,7 @@ cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-grafa
 cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-hadoop-sink/RPMS/x86_64/ambari-metrics-hadoop-sink-*.rpm ${AMBARI_PATH_NAME}/ &&
 cp ambari/ambari-metrics/ambari-metrics-assembly/target/rpm/ambari-metrics-monitor/RPMS/x86_64/ambari-metrics-monitor-*.rpm ${AMBARI_PATH_NAME}/ "
 
-cp phd-misc-peacock/stack-utils/setup_repo.sh build-ambari-rpms/ &&
+cp phd-ci/setup_repo.sh build-ambari-rpms/ &&
 chown -R root:root build-ambari-rpms &&
 createrepo build-ambari-rpms/ &&
 tar cvzf AMBARI-OUTPUT.tar.gz build-ambari-rpms &&

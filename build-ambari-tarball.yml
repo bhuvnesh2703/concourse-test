@@ -11,17 +11,8 @@ resources:
   type: git
   source:
     uri: {{ambari-uri}}
-    branch: {{phd-ci-branch}}
-    username: {{phd-ci-repo-username}}
-    password: {{phd-ci-repo-password}}
-
-- name: phd-misc-peacock
-  type: git
-  source:
-    uri: {{phd-misc-peacock-uri}}
-    branch: {{phd-ci-branch}}
-    username: {{phd-ci-repo-username}}
-    password: {{phd-ci-repo-password}}
+    branch: {{ambari-branch}}
+    private_key: {{private-key}}
 
 - name: docker-image
   type: docker-image
@@ -53,6 +44,5 @@ jobs:
         inputs:
           - name: phd-ci
           - name: ambari
-          - name: phd-misc-peacock
         run:
           path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh
