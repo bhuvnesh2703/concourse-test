@@ -2,7 +2,7 @@
 export AMBARI_BUILD_VERSION="2.4.0.0-1"
 export SKIP_TEST="-DskipTests"
 export SKIP_RAT_TEST="-Drat.skip"
-export OUTPUT_RPM_DIR="build-ambari-rpms"
+export AMBARI_PATH_NAME="build-ambari-rpms"
 
 
 pushd ambari &&
@@ -21,7 +21,6 @@ mvn -B -e clean install package rpm:rpm -Dbuild-rpm ${SKIP_TEST} ${SKIP_RAT_TEST
 popd &&
 
 # Copy the generated rpms to target output folder
-export AMBARI_PATH_NAME=${OUTPUT_RPM_DIR}
 mkdir -p ${AMBARI_PATH_NAME} &&
 cp ambari/ambari-server/target/rpm/ambari-server/RPMS/x86_64/ambari-server-*.rpm ${AMBARI_PATH_NAME}/ &&
 cp ambari/ambari-agent/target/rpm/ambari-agent/RPMS/x86_64/ambari-agent-*.rpm ${AMBARI_PATH_NAME}/ &&
