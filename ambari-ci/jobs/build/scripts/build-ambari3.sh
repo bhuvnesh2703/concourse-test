@@ -4,7 +4,7 @@ export SKIP_TEST="-DskipTests"
 export SKIP_RAT_TEST="-Drat.skip"
 export AMBARI_PATH_NAME="build-ambari-rpms"
 
-
+echo "Maven Logging is disabled, using -q option. So only errors will be logged if any"
 pushd ambari &&
 mvn -q versions:set -DnewVersion=${AMBARI_BUILD_VERSION} &&
 pushd ambari-metrics &&
