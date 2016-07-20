@@ -38,22 +38,23 @@ jobs:
       trigger: true
     - get: ambari
       trigger: true
-  - aggregate:
-    - task: build-ambari-rpms
-      priviliged: true
-      config:
-        platform: linux
-        image_resource:
-          type: docker-image
-          source:
-            username: {{docker-hub-username}}
-            password: {{docker-hub-password}}
-            repository: {{docker-hub-repo}}
-        inputs:
-          - name: phd-ci
-          - name: ambari
-        run:
-          path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari4.sh
+  - task: build-ambari-rpms
+    priviliged: true
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          username: {{docker-hub-username}}
+          password: {{docker-hub-password}}
+          repository: {{docker-hub-repo}}
+      inputs:
+        - name: phd-ci
+        - name: ambari
+      run:
+        path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari4.sh
+      outputs:
+        - name: build-ambari
   - put: ambari-internal-s3-bucket
     params:
-      file: ambari-internal-s3-bucket/test_put/file.txt
+      file: build-ambari/file.txt
