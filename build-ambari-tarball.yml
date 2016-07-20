@@ -29,6 +29,7 @@ resources:
     secret_access_key: {{ambari-internal-s3-bucket-access-key}}
     bucket: ambari-internal/dev
     region_name: us-west-2
+    versioned_file: file.txt
 
 jobs:
 - name: build-ambari
