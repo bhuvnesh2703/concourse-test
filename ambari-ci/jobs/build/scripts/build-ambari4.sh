@@ -1,3 +1,2 @@
 #!/bin/bash
-mkdir test_put
-touch test_put/file.txt
+touch build-ambari/file.txt
