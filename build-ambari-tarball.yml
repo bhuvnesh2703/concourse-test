@@ -22,6 +22,14 @@ resources:
     password: {{docker-hub-password}}
     repository: {{docker-hub-repo}}
 
+- name: ambari-internal-s3-bucket
+  type: s3
+  source:
+    access_key_id: {{ambari-internal-s3-bucket-key-id}}
+    secret_access_key: {{ambari-internal-s3-bucket-access-key}}
+    bucket: ambari-internal/dev
+    region_name: us-west-2
+
 jobs:
 - name: build-ambari
   plan:
@@ -45,4 +53,7 @@ jobs:
           - name: phd-ci
           - name: ambari
         run:
-          path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh
+          path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari4.sh
+  - put: ambari-internal-s3-bucket
+    params:
+      file: ambari-internal-s3-bucket/test_put/file.txt
