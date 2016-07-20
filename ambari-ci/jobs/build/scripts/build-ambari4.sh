@@ -1,2 +1,2 @@
 #!/bin/bash
-touch build-ambari/file.txt
+touch build-ambari/file1.txt
