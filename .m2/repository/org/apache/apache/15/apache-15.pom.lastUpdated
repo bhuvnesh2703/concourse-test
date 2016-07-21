@@ -1,0 +1,12 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:02 UTC 2016
+https\://oss.sonatype.org/content/groups/staging/.error=
+http\://download.java.net/maven/glassfish/.lastUpdated=1469079567194
+http\://download.java.net/maven/2/.lastUpdated=1469079566742
+http\://download.java.net/maven/glassfish/.error=
+http\://repo.spring.io/milestone/.error=
+http\://download.java.net/maven/2/.error=
+http\://repo.spring.io/milestone/.lastUpdated=1469080801715
+https\://oss.sonatype.org/content/groups/staging/.lastUpdated=1469080801513
+https\://maven.atlassian.com/repository/public/.lastUpdated=1469079567505
+https\://repository.apache.org/content/groups/staging/.lastUpdated=1469080802072

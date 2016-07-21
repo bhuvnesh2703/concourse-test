@@ -1,0 +1,141 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.googlecode.slf4j-maven-plugin-log</groupId>
+  <artifactId>slf4j-maven-plugin-log</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>A SLF4J implementation which delegates to maven-plugin logging toolkit. Especially useful when maven-plugin dependencies use slf4j, cause their logs aren't available as maven-plugin logs.</description>
+  <inceptionYear>2011</inceptionYear>
+  <url>http://code.google.com/p/slf4j-maven-plugin-log/</url>
+
+  <developers>
+    <developer>
+      <id>FLE</id>
+      <email>francois.lecomte@gmail.com</email>
+      <name>François Lecomte</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>LGPL</name>
+      <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>GNU LESSER GENERAL PUBLIC LICENSE</comments>
+    </license>
+  </licenses>
+  
+  <scm>
+    <connection>scm:svn:http://slf4j-maven-plugin-log.googlecode.com/svn/tags/slf4j-maven-plugin-log-1.0.0</connection>
+    <developerConnection>scm:svn:https://slf4j-maven-plugin-log.googlecode.com/svn/tags/slf4j-maven-plugin-log-1.0.0</developerConnection>
+    <url>http://slf4j-maven-plugin-log.googlecode.com/svn/tags/slf4j-maven-plugin-log-1.0.0</url>
+  </scm>
+
+  <issueManagement>
+    <url>http://code.google.com/p/slf4j-maven-plugin-log/issues</url>
+    <system>Google Code</system>
+  </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Sonatype Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>2.2.1</version>
+    </dependency>
+    <!-- plugin should work with slf4j-1.5.8 too -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- generate -javadoc.jar -->
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.8</version>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- generate -sources.jar -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <!-- sign -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

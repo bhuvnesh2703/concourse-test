@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:09 UTC 2016
+guice-3.0.jar>oss.sonatype.org=
+guice-3.0.pom>apache-hadoop=
+guice-3.0.pom>oss.sonatype.org=
+guice-3.0.jar>apache-hadoop=

@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:37 UTC 2016
+maven-dependency-plugin-2.1.pom>central=
+maven-dependency-plugin-2.1.jar>maven2-repository.atlassian=
+maven-dependency-plugin-2.1.jar>central=
+maven-dependency-plugin-2.1.pom>maven2-repository.atlassian=

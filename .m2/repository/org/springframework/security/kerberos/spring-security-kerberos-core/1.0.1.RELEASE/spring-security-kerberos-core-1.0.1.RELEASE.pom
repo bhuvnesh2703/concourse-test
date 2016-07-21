@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.springframework.security.kerberos</groupId>
+  <artifactId>spring-security-kerberos-core</artifactId>
+  <version>1.0.1.RELEASE</version>
+  <name>Spring Security Kerberos Core</name>
+  <description>Spring Security Kerberos Core</description>
+  <url>http://projects.spring.io/spring-security-kerberos</url>
+  <organization>
+    <name>SpringSource</name>
+    <url>http://projects.spring.io/spring-security-kerberos/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mwiesner</id>
+      <name>Mike Wiesner</name>
+      <email>mwiesner@vmware.com</email>
+    </developer>
+    <developer>
+      <id>jvalkeal</id>
+      <name>Janne Valkealahti</name>
+      <email>jvalkealahti@pivotal.io</email>
+      <properties>
+        <twitter>tunebluez</twitter>
+      </properties>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/SpringSource/spring-security-kerberos</connection>
+    <developerConnection>scm:git:git://github.com/SpringSource/spring-security-kerberos</developerConnection>
+    <url>https://github.com/SpringSource/spring-security-kerberos</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>4.1.6.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-core</artifactId>
+      <version>3.2.7.RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

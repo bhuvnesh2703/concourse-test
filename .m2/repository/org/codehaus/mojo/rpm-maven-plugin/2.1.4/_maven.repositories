@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:09:52 UTC 2016
+rpm-maven-plugin-2.1.4.pom>oss.sonatype.org=
+rpm-maven-plugin-2.1.4.jar>maven2-repository.atlassian=
+rpm-maven-plugin-2.1.4.pom>maven2-repository.atlassian=
+rpm-maven-plugin-2.1.4.jar>oss.sonatype.org=

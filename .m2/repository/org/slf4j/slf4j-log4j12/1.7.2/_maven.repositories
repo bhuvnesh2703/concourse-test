@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:16 UTC 2016
+slf4j-log4j12-1.7.2.jar>oss.sonatype.org=
+slf4j-log4j12-1.7.2.pom>apache-hadoop=
+slf4j-log4j12-1.7.2.pom>oss.sonatype.org=
+slf4j-log4j12-1.7.2.jar>apache-hadoop=

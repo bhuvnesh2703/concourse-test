@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:58:01 UTC 2016
+junit-4.10.pom>maven2-repository.atlassian=
+junit-4.10.jar>apache-hadoop=
+junit-4.10.jar>oss.sonatype.org=

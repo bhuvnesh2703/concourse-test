@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:36 UTC 2016
+build-helper-maven-plugin-1.8.pom>maven2-repository.atlassian=
+build-helper-maven-plugin-1.8.jar>central=
+build-helper-maven-plugin-1.8.pom>central=
+build-helper-maven-plugin-1.8.jar>maven2-repository.atlassian=

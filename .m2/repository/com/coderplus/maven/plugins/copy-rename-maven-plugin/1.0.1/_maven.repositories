@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:09:54 UTC 2016
+copy-rename-maven-plugin-1.0.1.pom>oss.sonatype.org=
+copy-rename-maven-plugin-1.0.1.jar>maven2-repository.atlassian=
+copy-rename-maven-plugin-1.0.1.jar>oss.sonatype.org=
+copy-rename-maven-plugin-1.0.1.pom>maven2-repository.atlassian=

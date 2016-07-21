@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:09:51 UTC 2016
+properties-maven-plugin-1.0.0.jar>maven2-repository.atlassian=
+properties-maven-plugin-1.0.0.pom>maven2-repository.atlassian=
+properties-maven-plugin-1.0.0.jar>oss.sonatype.org=
+properties-maven-plugin-1.0.0.pom>oss.sonatype.org=

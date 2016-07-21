@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:43 UTC 2016
+wagon-file-2.5.jar>maven2-repository.atlassian=
+wagon-file-2.5.pom>maven2-repository.atlassian=
+wagon-file-2.5.jar>central=
+wagon-file-2.5.pom>central=

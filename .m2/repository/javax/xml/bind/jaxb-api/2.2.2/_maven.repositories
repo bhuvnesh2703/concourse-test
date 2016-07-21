@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:22 UTC 2016
+jaxb-api-2.2.2.pom>oss.sonatype.org=
+jaxb-api-2.2.2.pom>apache-hadoop=
+jaxb-api-2.2.2.jar>apache-hadoop=
+jaxb-api-2.2.2.jar>oss.sonatype.org=

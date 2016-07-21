@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:37 UTC 2016
+maven-compiler-plugin-3.2.jar>central=
+maven-compiler-plugin-3.2.pom>central=
+maven-compiler-plugin-3.2.jar>maven2-repository.atlassian=
+maven-compiler-plugin-3.2.pom>maven2-repository.atlassian=

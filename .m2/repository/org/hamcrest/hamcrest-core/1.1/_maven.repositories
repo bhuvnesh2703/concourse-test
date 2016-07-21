@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:58:01 UTC 2016
+hamcrest-core-1.1.jar>oss.sonatype.org=
+hamcrest-core-1.1.jar>apache-hadoop=
+hamcrest-core-1.1.pom>maven2-repository.atlassian=

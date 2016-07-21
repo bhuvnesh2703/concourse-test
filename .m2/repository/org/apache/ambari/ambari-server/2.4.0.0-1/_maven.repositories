@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:07:04 UTC 2016
+ambari-server-2.4.0.0-1-dist.tar.gz>=
+ambari-server-2.4.0.0-1.jar>=
+ambari-server-2.4.0.0-1.pom>=

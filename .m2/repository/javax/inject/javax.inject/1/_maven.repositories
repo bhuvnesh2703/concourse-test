@@ -1,0 +1,8 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:09 UTC 2016
+javax.inject-1.pom>maven2-repository.atlassian=
+javax.inject-1.jar>central=
+javax.inject-1.pom>central=
+javax.inject-1.pom>apache-hadoop=
+javax.inject-1.jar>maven2-repository.atlassian=
+javax.inject-1.jar>apache-hadoop=

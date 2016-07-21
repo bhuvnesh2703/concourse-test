@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:03 UTC 2016
+objenesis-2.1.pom>apache-hadoop=
+objenesis-2.1.jar>apache-hadoop=
+objenesis-2.1.jar>oss.sonatype.org=
+objenesis-2.1.pom>oss.sonatype.org=

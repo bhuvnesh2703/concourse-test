@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:23 UTC 2016
+jackson-core-asl-1.9.9.pom>apache-hadoop=
+jackson-core-asl-1.9.9.jar>apache-hadoop=
+jackson-core-asl-1.9.9.jar>oss.sonatype.org=
+jackson-core-asl-1.9.9.pom>oss.sonatype.org=

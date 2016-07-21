@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:37 UTC 2016
+rpm-maven-plugin-2.0.1.jar>central=
+rpm-maven-plugin-2.0.1.jar>maven2-repository.atlassian=
+rpm-maven-plugin-2.0.1.pom>maven2-repository.atlassian=
+rpm-maven-plugin-2.0.1.pom>central=

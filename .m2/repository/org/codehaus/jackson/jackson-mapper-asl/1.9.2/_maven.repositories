@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 06:00:26 UTC 2016
+jackson-mapper-asl-1.9.2.jar>oss.sonatype.org=
+jackson-mapper-asl-1.9.2.pom>oss.sonatype.org=
+jackson-mapper-asl-1.9.2.pom>apache-hadoop=

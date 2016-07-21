@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:45:24 UTC 2016
+cglib-nodep-2.2.2.jar>apache-hadoop=
+cglib-nodep-2.2.2.jar>oss.sonatype.org=
+cglib-nodep-2.2.2.pom>oss.sonatype.org=

@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Thu Jul 21 05:28:43 UTC 2016
+log4j-1.2.12.jar>central=
+log4j-1.2.12.pom>central=
+log4j-1.2.12.jar>maven2-repository.atlassian=
+log4j-1.2.12.pom>maven2-repository.atlassian=
