@@ -29,10 +29,10 @@ resources:
     secret_access_key: {{ambari-internal-s3-bucket-access-key}}
     bucket: ambari-internal
     region_name: us-west-2
-    regexp: dev/file(.*).txt
+    regexp: dev/AMBARI-(.*)-HDP-latest.tar.gz
 
 jobs:
-- name: build-ambari
+- name: build-ambari-trunk
   plan:
   - aggregate:
     - get: phd-ci
@@ -52,10 +52,15 @@ jobs:
       inputs:
         - name: phd-ci
         - name: ambari
+      params:
+        SKIP_TEST: -DskipTests
+        SKIP_RAT_TEST: -Drat.skip
+        AMBARI_BUILD_VERSION: 2.4.0.0-1
+        AMBARI_RPM_FOLDER: AMBARI-trunk-HDP-latest
       run:
-        path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari4.sh
+        path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh
       outputs:
-        - name: build-ambari
+        - name: AMBARI-trunk-HDP-latest
   - put: ambari-internal-s3-bucket
     params:
-      file: build-ambari/file.txt
+      file: AMBARI-trunk-HDP-latest/AMBARI-trunk-HDP-latest.tar.gz
