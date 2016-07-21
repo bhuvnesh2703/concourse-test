@@ -58,7 +58,7 @@ jobs:
         AMBARI_BUILD_VERSION: 2.4.0.0-1
         AMBARI_RPM_FOLDER: AMBARI-trunk-HDP-latest
       run:
-        path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh
+        path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari.sh
       outputs:
         - name: ambari_artifacts
   - put: ambari-internal-s3-bucket
