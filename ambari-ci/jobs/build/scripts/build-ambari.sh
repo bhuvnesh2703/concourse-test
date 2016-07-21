@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x -e
 pushd ambari &&
 mvn versions:set -DnewVersion=${AMBARI_BUILD_VERSION} &&
 pushd ambari-metrics &&
