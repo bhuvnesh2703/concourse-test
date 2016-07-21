@@ -60,7 +60,7 @@ jobs:
       run:
         path: phd-ci/ambari-ci/jobs/build/scripts/build-ambari3.sh
       outputs:
-        - name: AMBARI-trunk-HDP-latest
+        - name: ambari_artifacts
   - put: ambari-internal-s3-bucket
     params:
-      file: AMBARI-trunk-HDP-latest/AMBARI-trunk-HDP-latest.tar.gz
+      file: ambari_artifacts/AMBARI-trunk-HDP-latest.tar.gz
