@@ -26,4 +26,6 @@ ENV JAVA_HOME /usr/java/default
 ENV M2_HOME /opt/maven/apache-maven-3.0.5
 ENV MAVEN_OPTS -Xmx2048m -XX:MaxPermSize=256m
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$M2_HOME/bin:$JAVA_HOME/bin
+RUN yes | cp -rf phd-ci/.npm /root/.npm
+RUN yes | cp -rf phd-ci/.m2 /root/.m2
 

@@ -13,7 +13,7 @@ resources:
     email: {{docker-hub-useremail}}
     username: {{docker-hub-username}}
     password: {{docker-hub-password}}
-    repository: {{docker-hub-repo}}
+    repository: {{docker-hub-test-repo}}
 
 jobs:
 - name:  build-ambari-docker-image
