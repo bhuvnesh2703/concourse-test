@@ -24,4 +24,4 @@ jobs:
     trigger: true
   - put: docker-image
     params:
-      build: phd-ci/ambari-ci/jobs/build/docker
+      build: phd-ci/docker
